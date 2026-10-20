@@ -1,0 +1,57 @@
+html, body {
+  background: #ffffff !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+body {
+  font-size: 9pt;
+  line-height: 1.15;
+  overflow-x: hidden;
+}
+.main-container, .container, .container-fluid {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#header, .title, .subtitle, .author, .date, #TOC {
+  display: none !important;
+}
+h1, h2, h3, h4 {
+  margin-top: 0 !important;
+}
+p {
+  margin: 0 !important;
+}
+.figure, .html-widget, .gt_table, table {
+  margin: 0 !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+.html-widget, .billboard, .billboarder, .bb, .c3 {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+img, svg, canvas {
+  display: block;
+  max-width: 100% !important;
+}
+img {
+  height: auto !important;
+  width: 100% !important;
+}
+.gt_table {
+  font-size: 8pt !important;
+}
+.gt_table td, .gt_table th {
+  padding: 2px 3px !important;
+}
+.report-inserted-text, .report-footnote {
+  text-align: justify !important;
+  text-justify: inter-word;
+  hyphens: auto;
+}
+.report-inserted-text p, .report-footnote p {
+  text-align: justify !important;
+}

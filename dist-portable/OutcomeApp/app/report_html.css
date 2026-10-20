@@ -1,0 +1,244 @@
+/* =========================================================
+   THEME WFP / PAM - Rapports HTML (Baseline & PDM)
+   Base: Bootswatch Sandstone + surcouche WFP
+   Couleurs : Bleu WFP #0072BC, Bleu fonce #004F9E, Orange #F0A500
+   ========================================================= */
+
+/* ---- Banniere WFP fixe en haut ---- */
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+
+  background-image:
+    url("WFP_WHITE_RGB.png"),
+    linear-gradient(90deg, #004F9E 0%, #0072BC 50%, #004F9E 100%);
+
+  background-position:
+    right 25px center,
+    center center;
+
+  background-size:
+    auto 40px,
+    100% 100%;
+
+  background-repeat:
+    no-repeat,
+    no-repeat;
+
+  z-index: 2000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+/* Compenser la hauteur de la banniere + padding pour toc_float */
+body {
+  padding-top: 75px !important;
+}
+
+/* ---- Numerotation automatique des titres ---- */
+/* ---- Numerotation des titres ---- */
+/* La numerotation est geree par R Markdown / Pandoc avec number_sections: true.
+   Ne pas ajouter de numerotation CSS ici, sinon les titres seront numerotes deux fois. */
+/* ---- Titres ---- */
+/* ---- Titres ---- */
+h1 {
+  color: #004F9E;
+  border-bottom: 3px solid #F0A500;
+  padding-bottom: 8px;
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+h2 {
+  color: #0072BC;
+  border-left: 5px solid #F0A500;
+  padding-left: 12px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+h3 {
+  color: #004F9E;
+  font-weight: 600;
+  margin-top: 16px;
+  font-size: 15px;
+}
+
+h4 {
+  color: #555555;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* ---- Table des matieres flottante (toc_float) ---- */
+#toc-sidebar {
+  background-color: #f8f9fa;
+  border-right: 1px solid #e2e8f0;
+}
+
+.tocify {
+  border: none;
+  background: transparent;
+  font-size: 8.5pt !important;
+  font-weight: normal !important;
+}
+
+.tocify-header {
+  font-size: 8.5pt !important;
+  font-weight: normal !important;
+}
+
+.tocify-subheader {
+  font-size: 8pt !important;
+  font-weight: normal !important;
+}
+
+.tocify .tocify-item,
+.tocify .tocify-item a {
+  color: #0072BC;
+  font-size: 8.5pt !important;
+  font-weight: normal !important;
+}
+
+.tocify .tocify-subheader .tocify-item,
+.tocify .tocify-subheader .tocify-item a {
+  font-size: 8pt !important;
+  font-weight: normal !important;
+}
+
+.tocify .tocify-item a:hover {
+  color: #F0A500;
+  background-color: #e8f1f8;
+  font-weight: normal !important;
+}
+
+.tocify .active,
+.tocify .active a {
+  background-color: #0072BC !important;
+  color: white !important;
+  border-radius: 4px;
+  font-weight: normal !important;
+}
+
+/* ---- Tableaux ---- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 10pt;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(135deg, #004F9E 0%, #0072BC 100%);
+  color: white;
+}
+
+thead th {
+  padding: 10px 12px;
+  font-weight: 600;
+  border: none;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f4f7fa;
+}
+
+tbody tr:hover {
+  background-color: #e8f1f8;
+}
+
+tbody td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* ---- gt_table specifique ---- */
+.gt_table {
+  font-size: 9.5pt !important;
+}
+
+.gt_col_headings {
+  background: linear-gradient(135deg, #004F9E 0%, #0072BC 100%) !important;
+  color: white !important;
+}
+
+/* ---- Figures et images ---- */
+.figure {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ---- Code ---- */
+code {
+  background-color: #eef4fa;
+  color: #004F9E;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-size: 9.5pt;
+}
+
+pre {
+  background-color: #f4f7fa;
+  border-left: 3px solid #0072BC;
+  padding: 12px 15px;
+  border-radius: 0 6px 6px 0;
+}
+
+/* ---- Separateurs ---- */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, #0072BC 0%, #F0A500 100%);
+  margin: 25px 0;
+}
+
+/* ---- Pied de page ---- */
+body::after {
+  content: "M&E | Programme Alimentaire Mondial";
+  display: block;
+  text-align: center;
+  font-size: 8pt;
+  color: #999;
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid #dee2e6;
+}
+
+/* ---- Note de bas de page du rapport ---- */
+.report-inserted-text {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  line-height: 1.45;
+  margin: 8px 0 14px 0;
+}
+
+.report-inserted-text p {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 0.65em;
+}
+
+.report-footnote {
+  font-style: italic;
+  font-size: 9pt;
+  color: #666666;
+  line-height: 1.4;
+  margin-top: 18px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}

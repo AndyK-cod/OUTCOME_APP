@@ -1,0 +1,27 @@
+# Artefacts de build / binaires (trop volumineux pour GitHub > 100 Mo)
+dist-portable/*.zip
+dist-portable/OutcomeApp/r-win/
+dist-portable/test_extract/
+electron-app/r-win/
+electron-app/node_modules/
+electron-app/dist/
+electron-app/build/
+electron-app/*.zip
+
+# Clone imbrique du projet distant
+Outcome-WFP/
+
+# Fichiers de session et de cache R
+.RData
+.Rhistory
+.Rproj.user/
+*.log
+
+# Dossiers d'outils locaux
+.kilo/
+.posit/
+
+# Fichiers temporaires
+*.tmp.R
+*.bak
+*.bak_*

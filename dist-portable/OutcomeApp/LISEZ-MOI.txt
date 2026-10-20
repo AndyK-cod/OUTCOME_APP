@@ -1,0 +1,46 @@
+============================================================
+ OUTCOME APP - VERSION PORTABLE
+============================================================
+
+INSTALLATION
+------------
+1. Decompressez le fichier ZIP ou vous voulez (Bureau,
+   Documents, cle USB...). Aucun droit administrateur requis.
+2. Aucune autre installation n'est necessaire : R et tous les
+   composants sont inclus dans le dossier.
+
+DEMARRAGE
+---------
+Double-cliquez sur :  Lancer Outcome App.bat
+
+- Une fenetre noire (console) s'ouvre : elle doit RESTER
+  OUVERTE pendant toute l'utilisation. La fermer arrete
+  l'application.
+- Le navigateur s'ouvre automatiquement sur l'application
+  apres quelques secondes (jusqu'a 1 minute au premier
+  demarrage).
+
+TYPE DE SESSION
+---------------
+Au demarrage, choisissez :
+- "Utilisateur" : utilisation standard de l'application.
+- "Administrateur" : mot de passe requis (fourni separement
+  par l'administrateur de l'application).
+
+DONNEES
+-------
+- Les telechargements MoDA necessitent une connexion internet.
+- Le cache MoDA est conserve dans le sous-dossier "cache" du
+  package : il persiste entre les sessions.
+- Les exports (Excel, SPSS, rapports) sont proposes en
+  telechargement depuis le navigateur.
+
+ARRET
+-----
+Fermez la fenetre noire de la console pour arreter
+l'application.
+
+EN CAS DE PROBLEME
+------------------
+Notez le message affiche dans la fenetre noire et contactez
+l'administrateur de l'application.

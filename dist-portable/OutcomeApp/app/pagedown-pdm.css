@@ -1,0 +1,378 @@
+/* =========================================================
+   Mise en page pagedown : A4 portrait - Style WFP/PAM
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Pages suivantes (pas de bannière)
+   --------------------------------------------------------- */
+@page {
+  size: A4 portrait;
+  margin: 0.7in;
+  margin-top: 0.7in;
+
+  @top-left-corner {
+    content: "";
+  }
+  @top-left {
+    content: "";
+  }
+  @top-center {
+    content: "";
+  }
+  @top-right {
+    content: "";
+  }
+  @top-right-corner {
+    content: "";
+  }
+
+  @bottom-center {
+    content: "M&E | World Food Programme";
+    font-size: 8pt;
+    color: #005EB8;
+    font-weight: bold;
+  }
+  @bottom-right {
+    content: counter(page);
+    font-size: 8pt;
+    color: #005EB8;
+    font-weight: bold;
+  }
+}
+
+/* ---------------------------------------------------------
+   Première page (bannière bleue + logo blanc)
+   --------------------------------------------------------- */
+@page:first {
+  size: A4 portrait;
+  margin: 0.7in;
+  margin-top: 2.2cm;
+
+  @top-left-corner {
+    content: "";
+    background-color: #005EB8;
+  }
+  @top-left {
+    content: "";
+    background-color: #005EB8;
+    background-image: url("WFP_WHITE_RGB.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 2.2cm auto;
+    width: 2.8cm;
+    height: 1.1cm;
+    padding-top: 0.2cm;
+    padding-left: 0.2cm;
+  }
+  @top-center {
+    content: "";
+    background-color: #005EB8;
+  }
+  @top-right {
+    content: "";
+    background-color: #005EB8;
+  }
+  @top-right-corner {
+    content: "";
+    background-color: #005EB8;
+  }
+
+  @bottom-center {
+    content: "M&E | World Food Programme";
+    font-size: 8pt;
+    color: #005EB8;
+    font-weight: bold;
+  }
+  @bottom-right {
+    content: counter(page);
+    font-size: 8pt;
+    color: #005EB8;
+    font-weight: bold;
+  }
+}
+
+/* ---------------------------------------------------------
+   Corps du document
+   --------------------------------------------------------- */
+
+body {
+  font-size: 9pt;
+  line-height: 1.2;
+}
+
+/* Paragraphes compacts */
+p {
+  margin-top: 0.15em !important;
+  margin-bottom: 0.3em !important;
+}
+
+.report-inserted-text,
+.report-footnote {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  line-height: 1.25;
+}
+
+.report-inserted-text p,
+.report-footnote p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* ---------------------------------------------------------
+   Page de titre : titre, sous-titre, auteur, date
+   --------------------------------------------------------- */
+
+.title {
+  font-size: 20pt !important;
+  font-weight: bold !important;
+  color: #005EB8 !important;
+  margin-top: 0.5em !important;
+  margin-bottom: 0.3em !important;
+}
+
+.subtitle {
+  font-size: 10pt !important;
+  color: #444444 !important;
+  margin-top: 0.2em !important;
+  margin-bottom: 0.2em !important;
+}
+
+.author {
+  font-size: 9pt !important;
+  color: #555555 !important;
+  margin-top: 0.2em !important;
+  margin-bottom: 0.1em !important;
+}
+
+.date {
+  font-size: 9pt !important;
+  color: #555555 !important;
+  margin-top: 0.1em !important;
+  margin-bottom: 0.3em !important;
+}
+
+/* ---------------------------------------------------------
+   Eviter les pages vides au debut des sections
+   --------------------------------------------------------- */
+
+section,
+.section,
+.level1,
+.level2,
+.level3,
+.level4,
+h1,
+h2,
+h3,
+h4 {
+  break-before: auto !important;
+  page-break-before: auto !important;
+}
+
+/* Eviter qu'un titre soit separe du texte suivant */
+h1,
+h2,
+h3,
+h4 {
+  break-after: avoid;
+  page-break-after: avoid;
+  color: #005EB8;
+}
+
+/* Titres plus compacts */
+h1 {
+  font-size: 13pt;
+  margin-top: 0.4em !important;
+  margin-bottom: 0.6em !important;
+  padding-bottom: 0.15em;
+}
+
+h2 {
+  font-size: 11pt;
+  margin-top: 0.35em !important;
+  margin-bottom: 0.5em !important;
+  padding-bottom: 0.1em;
+}
+
+h3 {
+  font-size: 10pt;
+  margin-top: 0.3em !important;
+  margin-bottom: 0.4em !important;
+  color: #003B8E;
+}
+
+h4 {
+  font-size: 9.5pt;
+  margin-top: 0.25em !important;
+  margin-bottom: 0.35em !important;
+  color: #003B8E;
+}
+
+/* ---------------------------------------------------------
+   Tableaux standards
+   --------------------------------------------------------- */
+
+table {
+  width: 100%;
+  font-size: 8pt;
+  border-collapse: collapse;
+  margin-top: 0.2em !important;
+  margin-bottom: 0.4em !important;
+}
+
+th,
+td {
+  padding: 2px 3px !important;
+}
+
+th {
+  background-color: #005EB8;
+  color: white;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+/* ---------------------------------------------------------
+   Tableaux gt
+   --------------------------------------------------------- */
+
+.gt_table {
+  width: 100% !important;
+  font-size: 8pt !important;
+  margin-top: 0.2em !important;
+  margin-bottom: 0.4em !important;
+  break-inside: auto !important;
+  page-break-inside: auto !important;
+}
+
+.gt_table,
+.gt_table * {
+  box-sizing: border-box;
+}
+
+.gt_table td,
+.gt_table th {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+}
+
+/* Titres des tableaux gt plus compacts */
+.gt_heading {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+.gt_title {
+  font-size: 10pt !important;
+  font-weight: bold !important;
+  color: #005EB8;
+}
+
+.gt_subtitle {
+  font-size: 8pt !important;
+  color: #555555;
+}
+
+.gt_col_heading {
+  background-color: #005EB8 !important;
+  color: #FFFFFF !important;
+  font-weight: bold !important;
+}
+
+.gt_col_heading .gt_column_spanner {
+  background-color: #005EB8 !important;
+  color: #FFFFFF !important;
+}
+
+.gt_row_group_first td {
+  border-top: 2px solid #005EB8 !important;
+}
+
+/* ---------------------------------------------------------
+   Figures, images et graphiques
+   --------------------------------------------------------- */
+
+.figure {
+  max-width: 100%;
+  margin-top: 0.2em !important;
+  margin-bottom: 0.35em !important;
+  break-inside: auto !important;
+  page-break-inside: auto !important;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/* Eviter les grands blancs causes par des blocs trop proteges */
+img,
+svg,
+.figure,
+.gt_table {
+  orphans: 2;
+  widows: 2;
+}
+
+/* ---------------------------------------------------------
+   Listes compactes
+   --------------------------------------------------------- */
+
+ul,
+ol {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.3em !important;
+  padding-left: 1.2em !important;
+}
+
+li {
+  margin-top: 0.1em !important;
+  margin-bottom: 0.1em !important;
+}
+
+/* ---------------------------------------------------------
+   Blocs de code, si presents
+   --------------------------------------------------------- */
+
+pre,
+code {
+  font-size: 7.5pt;
+}
+
+/* ---------------------------------------------------------
+   Corrections pour eviter les ruptures inutiles
+   --------------------------------------------------------- */
+
+.page-break,
+.pagebreak {
+  break-before: auto !important;
+  page-break-before: auto !important;
+}
+
+/* Si certains blocs Quarto ajoutent trop d'espace */
+.quarto-title-block,
+.title,
+.subtitle,
+.author,
+.date {
+  margin-top: 0.2em !important;
+  margin-bottom: 0.3em !important;
+}
+
+/* ---------------------------------------------------------
+   Commentaires insérés par l'utilisateur
+   --------------------------------------------------------- */
+.report-inserted-text {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+  line-height: 1.4;
+  margin: 6px 0 12px 0;
+}
